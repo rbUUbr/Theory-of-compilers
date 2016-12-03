@@ -30,4 +30,11 @@ module BinaryOperations
 		puts "<sentence> => #{$root.right.right.right.right.right.word} #{$root.left.word} #{$root.right.right.right.right.word} #{$root.right.right.right.word}"
 		puts "<sentence> => #{$root.right.right.right.right.right.word} #{$root.left.right.word} #{$root.right.right.right.right.word} me"
 	end
+		def make_second_subtask
+		puts "<sentence> => #{$root.right.right.right.right.right.word} #{$root.left.right.word} #{$root.right.right.right.right.word} me"
+		puts "<sentence> => #{$root.right.right.right.right.right.word} #{$root.left.word} #{$root.right.right.right.right.word} #{$root.right.right.right.word}"
+		puts "<sentence> => #{$root.right.right.right.right.right.word} #{$root.left.word} #{$root.right.right.right.right.word} #{$root.right.right.right.word}"
+		puts "<sentence> => #{$root.right.right.word}#{$root.left.word}"
+		puts "<sentence> => #{$root.right.word}#{$root.left.word}"
+	end
 end
