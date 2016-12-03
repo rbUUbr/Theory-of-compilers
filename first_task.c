@@ -7,8 +7,8 @@
 using namespace std;
 int main()
 {
-    regex regularType("[A-Za-z0-9]+[:]array([[][0-9]+[.]{3}[0-9]+(]))*of(?:integer|real|string|char)");
-    regex variableWithIndex("[A-Za-z0-9]([[][0-9]+(]))*");
+    regex regularType("[A-Za-z0-9]+[:]array([[][0-9]+[.]{3}[0-9]+(]))*(of)(?:integer|real|string|char)");
+    regex variableWithIndex("[A-Za-z0-9]+([[0-9]+(]))+");
     char inputString[100] = " ";
     cin >> inputString;
     if (regex_match(inputString, regularType)){
