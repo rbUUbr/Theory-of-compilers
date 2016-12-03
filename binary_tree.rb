@@ -18,16 +18,16 @@ module BinaryTree
     def insert(another_one, i)
 			if @word != another_one.word
 				case i
-					when 0
-						insert_into(:right, another_one, i)
-					when 1
-						insert_into(:right, another_one, i)
-					when 2
-						insert_into(:left, another_one, i)
-					when 3
-						insert_into(:right, another_one, i)
-					when 4...1000
-						insert_into(:right, another_one, i)
+				when 0
+					insert_into(:right, another_one, i)
+				when 1
+					insert_into(:left, another_one, i)
+				when 2
+					insert_into(:right, another_one, i)
+				when 3
+					insert_into(:right, another_one, i)
+				when 4...1000
+					insert_into(:right, another_one, i)
 				end
 			else
 				@count += 1
