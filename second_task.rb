@@ -1,15 +1,14 @@
-GRAMMAR_HASH = {:not_terminated => ["<sentence>", "<subject>", "<direct addition>" ,"<predicate>", "<auxiliary>", "<article>", "<noun>", "<verb>"]}
-#def output_not_terminated
-#	puts "<Special_word> ::= Where!When!Why!Who!What"
-	#puts "<Auxiliary> ::= Did!Does!Do!Am!Are!Is!"
-	#puts "<Subject> ::= [A-Za-z]+"
-	#puts "<Predicate> ::= [A-Za-z]+(?:/ing/|/ed/|/s/)"
-#	puts "<Other words> ::= [A-Za-z]+"
-#end
-#output_not_terminated
-def input_phrase
-	puts "Please, input your sentence:"
-	return gets.chomp.split(" ")
+require './binary_tree'
+
+include BinaryTree
+
+$root = Node.new("<sentence>")
+%w{Do you hear me?}.each.with_index do |word, index|
+    $root.insert(Node.new(word), index)
 end
-GRAMMAR_HASH[:terminated] = input_phrase
-puts GRAMMAR_HASH
+puts "Vп= {<sentence>, <subject>, <predicate>, <pronoun>}"
+$root.each do |node|
+  puts "#{node.word} (#{node.count})"
+end
+puts "#{$root.size} words. "
+puts "#{$root.count_all} nodes."
